@@ -1,11 +1,24 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  purge: {
+    enabled: true,
+    content: ['./dist/**/*.html'],
+    // content: ['./dist/**/*.html','./dist/**/*.js', './dist/**/*.php'],
+    },
+    
+  darkMode: 'class', // or 'media' or 'class'
+  // media take the system (device) default theme if any
   theme: {
     debugScreens: {
       position: ["top", "left"],
     },
-    extend: {},
+    extend: {
+      // fontFamily: {
+      //   myHeadline: ["Oswald"],
+      // },
+      colors: {
+        myColor: "#212f49",
+      },
+    },
   },
   variants: {
     extend: {},
